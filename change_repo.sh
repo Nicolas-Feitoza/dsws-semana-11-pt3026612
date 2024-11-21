@@ -5,4 +5,4 @@ git remote add origin $1
 git fetch --all
 git reset --hard origin/main
 git branch --set-upstream-to=origin/main main
-git pull
+git push -u origin main
