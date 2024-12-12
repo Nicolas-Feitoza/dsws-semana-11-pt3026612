@@ -1,0 +1,44 @@
+/* static/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+button, input, select, textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+

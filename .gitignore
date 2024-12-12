@@ -1,33 +1,31 @@
 # Ignorar arquivos do banco de dados SQLite
-data.sqlite
+data.sqlite  # Arquivo de banco de dados SQLite
 
 # Ignorar arquivos de cache e diretórios de compilação
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+__pycache__/  # Diretórios e arquivos de cache Python
+*.pyc  # Arquivos de bytecode Python
+*.pyo  # Arquivos otimizados Python
 
 # Ignorar diretórios de ambiente virtual
-venv/
-instance/
+venv/  # Diretório do ambiente virtual
+instance/  # Diretório de instância Flask
 
 # Ignorar arquivos de configuração específicos do ambiente de desenvolvimento
-*.env
-*.env.*
-*.ini
+*.env  # Arquivo de configuração .env
+*.env.*  # Arquivos de configuração .env.*
 
 # Ignorar arquivos de log
-*.log
+*.log  # Arquivos de log
 
 # Ignorar diretórios e arquivos temporários
-*.bak
-*.swp
-*.swo
-*.temp
+*.bak  # Arquivos de backup
+*.swp  # Arquivos swap (vim)
+*.swo  # Arquivos swap (vim)
+*.temp  # Arquivos temporários
 
 # Ignorar a pasta de migrações do Flask (se estiver utilizando o Flask-Migrate)
-migrations/
+migrations/  # Pasta de migrações do Flask
 
 # Ignorar arquivos de backup e sistema
-*.DS_Store
-Thumbs.db
+*.DS_Store  # Arquivo de metadados da MacOS
+Thumbs.db  # Arquivo de miniaturas do Windows
