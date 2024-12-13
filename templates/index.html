@@ -6,24 +6,35 @@
 {% block page_content %}
 <div class="page-header">
     <h1>Olá, {% if name %}{{ name }}{% else %}parece que é sua primeira vez por aqui{% endif %}!</h1>
-    {% if not known %}
-    <p>É um prazer conhecê-lo(a)!</p>
-    {% else %}
-    <p>É ótimo vê-lo(a) aqui novamente!</p>
-    {% endif %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-info">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
 </div>
 
-{% if known %}
-    <div class="alert alert-info">
-        {{ flash() }}
-        <p>Quer alterar seu nome?</p>
-        <form method="post" class="form-inline">
-            {{ wtf.hidden_tag() }}
-            {{ wtf.text_field(form.name, class='form-control', placeholder='Digite seu novo nome') }}
-            {{ wtf.submit_button('Alterar Nome', class='btn btn-primary') }}
-        </form>
-    </div>
-{% else %}
-    {{ wtf.quick_form(form) }}
+{{ wtf.quick_form(form) }}
+
+{% if users %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Prontuário</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.prontuario }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endif %}
 {% endblock %}
